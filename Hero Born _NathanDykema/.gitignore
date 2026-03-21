@@ -1,0 +1,51 @@
+# ========================
+# Unity generated folders
+# ========================
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+UserSettings/
+
+# ========================
+# Visual Studio
+# ========================
+.vs/
+*.csproj
+*.sln
+*.user
+
+# ========================
+# OS
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# Unity cache/meta handling
+# ========================
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# ========================
+# Crash Reports
+# ========================
+sysinfo.txt
+
+# ========================
+# Optional (large files)
+# ========================
+*.apk
+*.unitypackage
+
+Video&Pictures/
+*.mp4
+*.mov
+*.aup3
