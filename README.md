@@ -3,7 +3,7 @@
 1. Install Unity Hub
 2. Install Unity version listed in `ProjectSettings/ProjectVersion.txt`
 3. Clone this repository:
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/ndykema/CS445-Video-Game-Development)
 4. Open Unity Hub
 5. Add/Open the cloned project folder
 6. Let Unity import the project files
