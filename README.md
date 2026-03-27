@@ -50,13 +50,13 @@ git clone https://github.com/ndykema/CS445-Video-Game-Development.git
 ```
 
 Option 2: Download ZIP
-1.) Download the project as a ZIP from GitHub
-2.) Extract the folder locally
-3.) Opening the Project
-4.) Open Unity Hub
-5.) Click "Add Project"
-6.) Select the project folder
-7.) Ensure Unity version 2022.3.60f1 is selected
+- 1.) Download the project as a ZIP from GitHub
+- 2.) Extract the folder locally
+- 3.) Opening the Project
+- 4.) Open Unity Hub
+- 5.) Click "Add Project"
+- 6.) Select the project folder
+- 7.) Ensure Unity version 2022.3.60f1 is selected
 
 Running the Project
 - Click the Play button in the Unity Editor to test the demo
@@ -64,7 +64,7 @@ Running the Project
 - Go to File → Build Settings
 - Select your target platform
 - Click Build
-- 
+  
 UI & Game Design
 This project focuses heavily on player experience, immersion, and environmental storytelling.
 
