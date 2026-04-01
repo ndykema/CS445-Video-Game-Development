@@ -2,40 +2,58 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// This script allows the player to interact with candles when within range.
+// When near a candle, pressing "E" will light it (if the player has a lit torch).
 public class CandleTriggerInteractor : MonoBehaviour
 {
-    private GameObject currentCandle; // Store the current candle in range
+    // Stores the current candle GameObject the player is near
+    private GameObject currentCandle;
 
     void Update()
     {
-        // If we're near a candle and the player presses E, light the candle
+        // If a candle is in range, the player presses E, and the torch is lit
         if (currentCandle != null && Input.GetKeyDown(KeyCode.E) && GameBehavior.Instance.IsTorchLit)
         {
-            // Call your candle lighting method
+            // Get the CandleController component from the current candle
             CandleController candleController = currentCandle.GetComponent<CandleController>();
+
+            // If the candle exists and is not already lit
             if (candleController != null && !candleController.isLit)
             {
+                // Light the candle
                 candleController.LightCandle();
-                GameBehavior.Instance.HidePromptAfterLighting();  // Hide the prompt after lighting
+
+                // Hide the interaction prompt after lighting
+                GameBehavior.Instance.HidePromptAfterLighting();
             }
         }
     }
 
+    // Called when the player enters a trigger collider
     private void OnTriggerEnter(Collider other)
     {
+        // Check if the object entered is tagged as a candle
         if (other.CompareTag("Candle"))
         {
+            // Store the candle reference
             currentCandle = other.gameObject;
-            GameBehavior.Instance.SetCurrentCandle(currentCandle);  // Show the prompt
+
+            // Notify GameBehavior to show a prompt for interaction
+            GameBehavior.Instance.SetCurrentCandle(currentCandle);
         }
     }
 
+    // Called when the player exits a trigger collider
     private void OnTriggerExit(Collider other)
     {
+        // Check if the object exited is tagged as a candle
         if (other.CompareTag("Candle"))
         {
+            // Clear the current candle reference
             currentCandle = null;
-            GameBehavior.Instance.ClearCurrentCandle();  // Hide the prompt
+
+            // Notify GameBehavior to remove the interaction prompt
+            GameBehavior.Instance.ClearCurrentCandle();
         }
     }
 }
